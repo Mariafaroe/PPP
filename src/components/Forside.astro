@@ -1,0 +1,52 @@
+---
+
+---
+
+<div class="max-w-4xl mx-auto px-10 md:px-0 pb-5 md:-mt-24">
+  <body class="py-1">
+    <div class="relative">
+      <h1
+        class="text-10xltele md:text-10xl text:5xl text-grøn text-center font-impact relative z-20"
+      >
+        MARIA
+      </h1>
+      <img
+        src="maria.png"
+        class="md:absolute inset-x-0 top-72 mx-auto w-1/2 h-auto object-cover z-20 grayscale"
+      />
+
+      <h2
+        class="text-10xltele md:text-10xl text-grøn text-center font-impact relative z-10 md:pt-16"
+      >
+        FARØ
+      </h2>
+    </div>
+
+    <div class="flex justify-center items-center transform -translate-y-1/2">
+      <svg
+        id="scrollDown"
+        class="h-12 w-12 text-gray-500 hover:text-gray-700 transition duration-300 transform hover:scale-110 cursor-pointer"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </div>
+    <h3 id="scrollTarget" class="text-center"></h3>
+
+    <script>
+      document
+        .getElementById("scrollDown")
+        .addEventListener("click", function () {
+          var scrollTarget = document.getElementById("scrollTarget");
+          scrollTarget.scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+  </body>
+</div>

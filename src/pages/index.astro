@@ -1,8 +1,36 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
+import Button from "../components/Button.astro";
+import Ommig from "../components/Ommig.astro";
+import Forside from "../components/Forside.astro";
+import Projekter from "../components/Projekter.astro";
+import Footer from "../components/Footer.astro";
 ---
-<MainLayout title="Astro, Tailwind, Alpine, Motion One og Animate CSS Starter">
+
+<MainLayout title="tihu ">
+  <html lang="da">
+    <head>
+      <meta charset="utf-8" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="viewport" content="width=device-width" />
+      <meta name="generator" content={Astro.generator} />
+      <title>{Astro.props.title}</title>
+    </head>
+    <body class="bg-grøn">
+      <section class="bg-beige" id="forside">
+        <Forside />
+      </section>
+      <section class="bg-beige" id="ommig">
+        <Ommig />
+      </section>
+      <section class="bg-beige" id="ommig">
+        <Projekter />
+      </section>
+      <section class="bg-beige" id="ommig">
+        <Footer />
+      </section>
+
+      <!--
 	<article class="prose" x-data>
 		<h1>Astro, Tailwind, Alpine, Motion One og Animate CSS kombineret i en fin, lille starter:-)</h1>
 		<p>Brug starteren til at komme godt i gang med dine Digital Design projekter</p>
@@ -37,3 +65,7 @@ import Button from '../components/Button.astro';
   		animation-duration: 1s; /* don't forget to set a duration! */
 	}
 </style>
+ -->
+    </body>
+  </html>
+</MainLayout>
